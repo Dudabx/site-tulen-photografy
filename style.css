@@ -1,0 +1,828 @@
+#scrollSN{
+    overflow: hidden;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    transition: margin-left 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.menuO {
+    font-size: 42px;
+    cursor: pointer;
+    padding: 15px;
+    background: #0f0f0f;
+    color: white;
+    border: none;
+    position: fixed;
+    z-index: 1;
+}
+
+.menulmao2 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+}
+
+.menulmao2>a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #b2b2b2;
+    font-weight: bold;
+    display: block;
+    transition: 0.3s;
+}
+
+.menulmao2 label {
+  color: white;
+}
+
+.menulmao2>p{
+  text-align: center;
+  color: #636363;
+  position: absolute;
+  bottom: 6%;
+  font-size: larger;
+}
+
+#textoMenuSlaNnSei{
+  margin-left: 12%;
+  max-width: 79%;
+  line-height: 28px;
+}
+
+.menulmao2 .← {
+    position: absolute;
+    top: 0;
+}
+
+.menulmao2 .logoT {
+    position: absolute;
+    top: 0;
+}
+
+.menulmao2>a{
+  position: relative;
+  top: 16%;
+  text-align: center;
+}
+
+.menulmao2>p>a{
+  color: #c2c2c2;
+  text-decoration: none;
+}
+
+.menulmao2>a:hover{
+  color: #2916e0;
+  transition: 0.2s;
+}
+
+.menulmao2>p>a:hover{
+  color: #2916e0;
+}
+
+#qDrogaEin>a>svg{
+  fill: #b2b2b2;
+  height: 20px;
+  text-align: center;
+  position: relative;
+  top: 450%;
+  left: 30%;
+}
+
+#qDrogaEin{
+position: relative;
+top: 10%;
+display: flex;
+justify-content: space-evenly;
+}
+
+.← {
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #0f0f0f;
+  height: 86px;
+  width: 68px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoT {
+  background-color: #2916e0;
+  height: 86px;
+  width: 182px;
+  margin-left: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#selected{
+  color: #2916e0;
+}
+
+#menulmao {
+    display: none;
+}
+
+#menulmao:checked ~ .menulmao2 {
+    width: 250px;
+}
+
+#menulmao:checked{
+    margin-left: 250px;
+}
+
+#home{
+  position: relative;
+  left: 68px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#img1{
+  background-image: url(imagens/img2.webp);
+  order: 1;
+}
+
+#img2{
+  background-image: url(imagens/img3.webp);
+  order: 1;
+}
+
+#img3{
+  background-image: url(imagens/img4.webp);
+  order: 1;
+}
+
+#img4{
+  background-image: url(imagens/img5.webp);
+  order: 1;
+}
+
+#img5{
+  background-image: url(imagens/img1.webp);
+  order: 0;
+  flex-grow: 6;
+  background-color: transparent;
+}
+
+#img5 .text,
+#img5 .tag,
+#img5 .pfp,
+#img5 .name
+{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#img1:hover~#img5 .tag,
+#img1:hover~#img5 .text,
+#img1:hover~#img5 .pfp,
+#img1:hover~#img5 .name,
+#img2:hover~#img5 .tag,
+#img2:hover~#img5 .text,
+#img2:hover~#img5 .pfp,
+#img2:hover~#img5 .name,
+#img3:hover~#img5 .tag,
+#img3:hover~#img5 .text,
+#img3:hover~#img5 .pfp,
+#img3:hover~#img5 .name,
+#img4:hover~#img5 .tag,
+#img4:hover~#img5 .text,
+#img4:hover~#img5 .pfp,
+#img4:hover~#img5 .name,
+#img5:hover~#img5 .tag,
+#img5:hover~#img5 .text,
+#img5:hover~#img5 .pfp,
+#img5:hover~#img5 .name {
+  opacity: 0;
+}
+
+#img1:hover ~ #img5,
+#img2:hover ~ #img5,
+#img3:hover ~ #img5,
+#img4:hover ~ #img5{
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img:hover .tag,
+.img:hover .text,
+.img:hover .pfp,
+.img:hover .name {
+  opacity: 1;
+  transition: 2s;
+}
+
+.img{
+  position: relative;
+  flex-grow: 2;
+  background-size: cover;
+  background-position: 20% 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  transition: 0.4s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img:hover{
+  flex-grow: 6;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.tag{
+  position: absolute;
+  top: 70%;
+  margin-left: 4%;
+  background-color: #fff;
+  width: 100px;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #0000e0;
+  opacity: 0;
+}
+.text{
+  text-wrap: nowrap;
+  margin-left: 4%;
+  position: absolute;
+  top: 74%;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  opacity: 0;
+}
+
+.pfp{
+  position: absolute;
+  top: 85%;
+  left: 4%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+}
+.name{
+  position: absolute;
+  top: 87%;
+  margin-left: 14%;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  opacity: 0;
+}
+
+.svgDoLadoLáSla{
+  position: fixed;
+  height: 20px;
+  overflow-y: scroll;
+}
+
+#svgFace{
+  position: fixed;
+  top: 40%;
+  left: 1.5%;
+}
+#svgTwt{
+  position: fixed;
+  top: 50%;
+  left: 1.5%;
+}
+#svgLink{
+  position: fixed;
+  top: 60%;
+  left: 1.5%;
+}
+#svgInsta{
+  position: fixed;
+  top: 70%;
+  left: 1.5%;
+}
+
+#mapsOloko{
+  position: relative;
+  left: 68px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#quadradoMapsOloko{
+  position: absolute;
+  top: 60%;
+  left: 12%;
+  height: 23%;
+  width: 72%;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#quadradoMapsOloko>p{
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+#mapsOlokoTxt1{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+#mapsOlokoTxt2{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+#mapsOlokoTxt3{
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+.svgDoMapsOloko{
+  height: 50px;
+  position: relative;
+  top: 20%;
+  fill: #2916e0;
+}
+
+#localSVG{
+  position: absolute;
+  left: 14%;
+}
+
+#emailSVG{
+  position: absolute;
+  left: 45.5%;
+}
+
+#clockSVG{
+  position: absolute;
+  right: 15.5%;
+}
+
+#quadradoMapsOloko>p>span{
+  color: #bababa;
+}
+
+#coraco{
+  color: #e52f2f;
+}
+
+#aboutOloko{
+  position: relative;
+  left: 68px;
+  height: 100vh;
+}
+
+#ahManoSla{
+  background-color: #2916e0;
+  width: 45%;
+  height: 100%;
+}
+
+#simboloLol{
+  position: absolute;
+  left: 10%;
+  top: 2%;
+  z-index: 1;
+  width: 400px;
+  height: auto;
+}
+
+#oiCasada{
+  color: white;
+  margin-left: 20%;
+  font-size: 32px;
+  position: relative;
+  top: 2.5%;
+  z-index: 3;
+}
+
+#GlenCross{
+  position: relative;
+  border-radius: 100%;
+  margin-left: 30%;
+  margin-top: 5%;
+  z-index: 2;
+  width: 330px;
+  height: auto;
+}
+
+#muchoTexto{
+  color: white;
+  margin-left: 20%;
+  font-size: 16px;
+  position: relative;
+  line-height: 25px;
+  max-width: 70%;
+}
+
+#linkDoAbout{
+  color: white;
+  margin-left: 5%;
+  font-size: 16px;
+  position: relative;
+  top: 5%;
+  font-style: italic;
+}
+
+#botaoDoAboutOloko{
+  padding: 10px 40px;
+  color: white;
+  border: 2px solid #695ce9;
+  border-radius: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+  top: 5%;
+  margin-left: 20%;
+}
+
+#ahManoSlaDnv{
+  position: absolute;
+  left: 45%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#ahManoSlaDnv>h2{
+  font-size: 38px;
+  border-bottom: solid 3px #2916e0;
+  width: 174px;
+  text-decoration-thickness: 2px;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+
+#ahManoSlaDnv>p{
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 25px;
+  max-width: 48%;
+  color: #636363;
+  margin-left: 1%;
+}
+
+.baguiLaComOsTrem {
+    display: flex;
+    gap: 70px;
+    padding: 20px;
+}
+
+.azulzinho {
+    text-align: center;
+    width: 120px;
+}
+
+.textinhodapagina {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #2916e0 calc(var(--percent) * 1%),  
+        #eee calc(var(--percent) * 1%),
+        #eee 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.textinhodapagina::before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+}
+
+.porcentoOloko {
+    position: relative;
+    font-size: 18px;
+}
+
+.oisusu {
+    font-size: 24px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+#galeraOloko{
+  position: relative;
+  left: 68px;
+  height: 170vh;
+  z-index: 1;
+}
+
+#menuDaGalera{
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 9%;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+#menuDaGalera>h2{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 10%;
+  font-weight: normal;
+  font-size: 26px;
+}
+
+#menuDaGalera>a{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 3%;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  position: relative;
+  left: 38%;
+}
+
+#conteudoDaGeladeiraOloko{
+  position: relative;
+  width: 95%;
+  height: 99%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+#conteudoDaGeladeiraOloko img {
+  display: block;
+}
+
+.item1 { grid-column: span 2; grid-row: span 2;}
+.item2 { grid-column: span 1; grid-row: span 1;}
+.item3 { grid-column: span 1; grid-row: span 1;}
+.item4 { grid-column: span 1; grid-row: span 2;}
+.item5 { grid-column: span 2; grid-row: span 2;}
+.item6 { grid-column: span 2;}
+.item7 { grid-column: span 1;}
+.item8 { grid-column: span 1; grid-row: span 1;}
+.item9 { grid-column: span 2; grid-row: span 1;}
+.item10 { grid-column: span 1; grid-row: span 1;}
+.item11 { grid-column: span 1; grid-row: span 1;}
+
+.galery {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+.galery1 {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.olokoMeuPFP {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+  z-index: 22;
+}
+
+.name2{
+  color: white;
+  opacity: 1;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 27%;
+  bottom: 10%;
+}
+
+.name2dnvnnligo{
+  color: white;
+  opacity: 1;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 27%;
+  bottom: 7%;
+}
+
+.odeioIssoMDSAlgmMeAjuda{
+  color: white;
+  opacity: 1;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 16%;
+  bottom: 7%;
+}
+
+.odeioIssoMDSAlgmMeAjuda2{
+  color: white;
+  opacity: 1;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  left: 16%;
+  bottom: 10%;
+}
+
+.item:hover .galery1 {
+  opacity: 1;
+}
+
+.itensdl {
+  position: relative;
+  inset: 0;
+}
+
+.galery1DNV{
+  position: absolute;
+  inset: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 110px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.galery1DNV>p{
+  color: #2916e0;
+  text-align: center;
+  margin-top: 6%;
+}
+
+#linkBlog>a>h2{
+  color: white;
+  position: absolute;
+  bottom: 7%;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBlogg>a>h2{
+  color: white;
+  position: absolute;
+  bottom: 7%;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBloggg>a>h2{
+  color: white;
+  position: absolute;
+  bottom: 7%;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBlogggg>a>h2{
+  color: white;
+  position: absolute;
+  bottom: 7%;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBloggggg>a>h2{
+  color: white;
+  position: absolute;
+  bottom: 7%;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBlog>p{
+  color: white;
+  position: absolute;
+  bottom: 22%;
+  font-size: 13px;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBlogg>p{
+  color: white;
+  position: absolute;
+  bottom: 49%;
+  font-size: 13px;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBloggg>p{
+  color: white;
+  position: absolute;
+  bottom: 27%;
+  font-size: 13px;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBlogggg>p{
+  color: white;
+  position: absolute;
+  bottom: 35%;
+  font-size: 13px;
+  left: 8%;
+  max-width: 220px;
+}
+
+#linkBloggggg>p{
+  color: white;
+  position: absolute;
+  bottom: 30%;
+  font-size: 13px;
+  left: 8%;
+  max-width: 220px;
+}
+
+#conteudoDoGoblinOloko{
+  width: 95%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(5, 7fr);
+  gap: 10px;
+}
+
+.primeiro1 { grid-column: span 1; grid-row: span 3;}
+.primeiro2 { grid-column: span 1; grid-row: span 1;}
+.primeiro3 { grid-column: span 1; grid-row: span 3;}
+.primeiro4 { grid-column: span 1; grid-row: span 2;}
+.primeiro5 { grid-column: span 1; grid-row: span 3;}
+.primeiro6 { grid-column: span 1; grid-row: span 3;}
+.primeiro7 { grid-column: span 1; grid-row: span 2;}
+.primeiro8 { grid-column: span 1; grid-row: span 2;}
+.primeiro9 { grid-column: span 1; grid-row: span 3;}
+.primeiro10 { grid-column: span 1; grid-row: span 2;}
+.primeiro11 { grid-column: span 1; grid-row: span 3;}
+.primeiro12 { grid-column: span 1; grid-row: span 3;}
+.primeiro13 { grid-column: span 1; grid-row: span 2;}
+.primeiro14 { grid-column: span 1; grid-row: span 2;}
+.primeiro15 { grid-column: span 1; grid-row: span 1;}
+  
+#goblinOloko{
+  position: relative;
+  left: 68px;
+  height: 100vh;
+  z-index: 1;
+}
+
+#nossaManoMDS{height: 2px;}
